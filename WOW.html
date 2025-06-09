@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>מיקסר מצב רוח</title>
+  <style>
+    body {
+      direction: rtl;
+      background: linear-gradient(to bottom, #f9f9f9, #e0e0ff);
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+ }
+    h1 {
+      font-size: 2.5em;
+      color: #4a4a8a;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      background-color: #6c63ff;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #5750d4;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 22px;
+ color: #4a4a4a;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ מיקסר מצב רוח ✨</h1>
+  <p>לחצי וגלי איזה מצב רוח מלווה אותך היום!</p>
+  <button onclick="mixMood()">🎲 הפתיעי אותי</button>
+  <div id="result"></div>
+  <footer>נבנה באהבה עצמית ❤</footer>
+
+  <script>
+    const moods = [
+      "שמחה מתפוצצת 🌞",
+      "רוגע פנימי ☁",
+      "השראה פורצת 🪄",
+      "אנרגיה מתחדשת 🔋",
+"עייפות מתוקה 😴",
+      "געגוע מחמם 💭",
+      "נחישות שקטה 💪",
+      "אהבה זורמת 💖"
+    ];
+
+    function mixMood() {
+      const mood = moods[Math.floor(Math.random() * moods.length)];
+      document.getElementById("result").textContent = "המצב רוח שלך: " + mood;
+    }
+  </script>
+</body>
+</html>
